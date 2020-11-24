@@ -1,0 +1,27 @@
+variables:
+  - name: key_vault_create
+    value: true
+  - name: key_vault_name
+    value: azkv-prd-zn-titansoft
+  - name: location
+    value: southafricanorth
+  - name: resource_group_create
+    value: true
+  - name: resource_group_name
+    value: azrg-prd-zn-titansoft
+  - name: terraform_client_id
+    value: $(terraform-client-id)
+  - name: terraform_client_secret
+    value: $(terraform-client-secret)
+  - name: terraform_subscription_id
+    value: $(terraform-subscription-id)
+  - name: terraform_tenant_id
+    value: $(terraform-tenant-id)
+  - name: terraform_organization
+    value: $(terraform-organization)
+  - name: terraform_token
+    value: $(terraform-token)
+  - name: tags_environment
+    value: Production
+  - name: workspace_name
+    value: key_vault-zn-prd
