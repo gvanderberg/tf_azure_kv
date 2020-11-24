@@ -35,8 +35,8 @@ steps:
       # terraform apply
       terraform apply -auto-approve -no-color -input=false
 
-      fqdn=$(terraform output traffic_manager_profile_fqdn)
-      echo "##vso[task.setvariable variable=fqdn;isOutput=true]$fqdn"
+      vault_uri=$(terraform output vault_uri)
+      echo "##vso[task.setvariable variable=vault_uri;isOutput=true]$vault_uri"
     displayName: terraform apply
     name: terraformApply
     env:
