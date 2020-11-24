@@ -24,4 +24,4 @@ variables:
   - name: tags_environment
     value: Production
   - name: workspace_name
-    value: key_vault-zn-prd
+    value: tf_azure_kv-zn-prd
