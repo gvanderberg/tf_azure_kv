@@ -25,8 +25,8 @@ stages:
     parameters:
       condition: succeeded()
       dependsOn: package
-      displayName: prd (southafricanorth)
-      environment: prd (southafricanorth)
+      displayName: production
+      environment: prod (southafricanorth)
       stageName: release_prd_zn
       variableTemplate: release-variables-zn-prd.yml
 
@@ -34,8 +34,8 @@ stages:
     parameters:
       condition: succeeded()
       dependsOn: release_prd_zn
-      displayName: prd (southafricanorth)
-      environment: prd (southafricanorth)
+      displayName: production
+      environment: prod (southafricanorth)
       stageName: destroy_prd_zn
       templateName: terraform-steps-destroy.yml
       variableTemplate: release-variables-zn-prd.yml
