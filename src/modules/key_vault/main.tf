@@ -38,9 +38,9 @@ data "azurerm_key_vault" "this" {
 
 resource "azurerm_key_vault" "this" {
   lifecycle {
-    ignore_changes = [
-      access_policy
-    ]
+    # ignore_changes = [
+    #   access_policy
+    # ]
   }
   
   count = var.key_vault_create ? 1 : 0
