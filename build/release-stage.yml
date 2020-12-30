@@ -40,9 +40,9 @@ stages:
         displayName: deployment job
         environment: ${{ parameters.environment }}
         variables:
+          - template: ${{ parameters.variableTemplate }}
           - name: vault_uri
             value: $[ dependencies.provision.outputs['terraformApply.vault_uri'] ]
-          - template: ${{ parameters.variableTemplate }}
 
         strategy:
           runOnce:

@@ -12,7 +12,7 @@ variables:
   - name: tags_managed_by
     value: $(managed_by)
   - name: terraform_version
-    value: 0.13.5
+    value: 0.14.3
 
 stages:
   - template: build-stage.yml
@@ -25,17 +25,16 @@ stages:
     parameters:
       condition: succeeded()
       dependsOn: package
-      displayName: production
-      environment: prod (southafricanorth)
-      stageName: release_prd_zn
-      variableTemplate: release-variables-zn-prd.yml
+      displayName: deploy dev
+      environment: development
+      stageName: deploy_dev
+      variableTemplate: release-variables-we-dev.yml
 
-  - template: terraform-stage.yml
+  - template: release-stage.yml
     parameters:
       condition: succeeded()
-      dependsOn: release_prd_zn
-      displayName: production
-      environment: prod (southafricanorth)
-      stageName: destroy_prd_zn
-      templateName: terraform-steps-destroy.yml
-      variableTemplate: release-variables-zn-prd.yml
+      dependsOn: deploy_dev
+      displayName: deploy prod
+      environment: production
+      stageName: deploy_prod
+      variableTemplate: release-variables-we-prd.yml

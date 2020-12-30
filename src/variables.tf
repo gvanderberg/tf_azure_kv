@@ -44,7 +44,6 @@ variable "terraform_token" {
 
 variable "tags" {
   default = {
-    costCentre  = "IT Dev"
     createdBy   = "Terraform"
     environment = "__tags_environment__"
     location    = "__tags_location__"

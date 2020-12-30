@@ -1,0 +1,27 @@
+variables:
+  - name: key_vault_create
+    value: true
+  - name: key_vault_name
+    value: azkv-dev-we-titansoft
+  - name: location
+    value: westeurope
+  - name: resource_group_create
+    value: true
+  - name: resource_group_name
+    value: azrg-dev-we-titansoft
+  - name: terraform_client_id
+    value: $(dev-terraform-client-id)
+  - name: terraform_client_secret
+    value: $(dev-terraform-client-secret)
+  - name: terraform_subscription_id
+    value: $(dev-terraform-subscription-id)
+  - name: terraform_tenant_id
+    value: $(terraform-tenant-id)
+  - name: terraform_organization
+    value: $(terraform-organization)
+  - name: terraform_token
+    value: $(terraform-token)
+  - name: tags_environment
+    value: Development
+  - name: workspace_name
+    value: azure-kv-we-dev
