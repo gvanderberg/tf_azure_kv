@@ -10,9 +10,9 @@ variables:
   - name: resource_group_name
     value: azrg-dev-we-titansoft
   - name: terraform_client_id
-    value: $(dev-terraform-client-id)
+    value: $(terraform-client-id)
   - name: terraform_client_secret
-    value: $(dev-terraform-client-secret)
+    value: $(terraform-client-secret)
   - name: terraform_subscription_id
     value: $(dev-terraform-subscription-id)
   - name: terraform_tenant_id
